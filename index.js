@@ -92,6 +92,18 @@ console.log(firstname,secondname,thirdone, kuchbhi)
 
 
 
+//STRING INTERPOLATION
+// It is used to insert/embedd expression into string like variables, expression, mathmatical expression and perform calculation
+
+var name = "salesforce LWC";
+console.log(`hello ${name}`)
+
+var a1 = 10, b1=20;
+console.log(`the addition ${a1} and ${b1} is ${a1+b1}`)
+
+
+
+
 
 
 
