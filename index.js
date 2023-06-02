@@ -1,25 +1,33 @@
-// rest example
-console.clear();
-let arr = ['Amber', 'Chetan', 'Vikalp', 'rishabh'];
-[a,b,...rest] = arr
-console.log(a, b, ...arr);
-console.log(a, b,...rest);
-console.log(arr)
-
-//Normal Function
-function abc(){
-  console.log("hello")
+//In regular function this keyword represent object that called fucntion
+//before binding 
+var obj = {
+  id : 42,
+  counter:function counter(){
+    setTimeout(function(){
+      console.log(this.id)
+    },1000)
+  }
 }
-abc()
+obj.counter()
+//how we are solving this before ES6
+var obj = {
+  id : 42,
+  counter: function counter(){
+    setTimeout(function(){
+      console.log(this.id)
+    }.bind(this,1000))
+  }
+}  
+obj.counter()
 
-// arrow function
-xyz = ()=>{
-  console.log('hello arrow')
+
+// In arrow this keyword always represent object that defined the arrow func 
+var obj1={
+  num: 45,
+  myArrow: function myAction(){
+    setTimeout(()=>{
+      console.log(this.num)
+    },1000)
+  }
 }
-xyz()
-
-// arrow with no parameter and paranthesis
-// applicable for single output and input
-
-xyz = _=> console.log('hello arrow')
-xyz()
+obj1.myArrow()
