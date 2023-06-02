@@ -69,6 +69,33 @@ var obj3 = {...obj,...obj2}
 console.log(obj3)
 
 
+//DESTRUCTURING
+//It is used to unpack the object and array into bunch of variables, it sometimes more convient.
+//TWO TYPES OF DESTRUCTURING :- 1.Object Des 2.Array Des
+
+var option = {
+  title:"I am object destructuring",
+  types: 2,
+  correct: true
+}
+let {title,types,correct} = option // this part doing the actual destructuing. if you will hide this then lower part will not work
+
+console.log(title,types,correct)
+
+//ARRAY DESTRUCTUIRING
+
+let lstarr = ["Salesforce", "is", "worlds", "best CRM"]
+
+let [firstname, secondname, thirdone, kuchbhi] = lstarr
+
+console.log(firstname,secondname,thirdone, kuchbhi)
+
+
+
+
+
+
+
 
 
 
