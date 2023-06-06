@@ -138,3 +138,16 @@ details1.forEach((item) => {
   }
 });
 console.log(arrNew);
+
+//MAP METHODS
+let newDetails = [
+  { name: 'salesforce', release: 22 },
+  { name: 'salesCloud', release: 23 },
+  { name: 'salesforce', release: 18 },
+];
+let temp = newDetails.map(item=>{
+  return item.release > 18 ? {...item,"name":"new name" ,"release":24} : {...item}
+})
+console.log(temp)
+console.log(newDetails)
+
