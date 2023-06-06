@@ -110,3 +110,31 @@ async function getUser() {
   console.log(data);
 }
 getUser();
+
+//ARRAY METHODS
+let details = [
+  { name: 'salesforce', release: 22 },
+  { name: 'salesCloud', release: 23 },
+  { name: 'salesforce', release: 18 },
+];
+let arr = [];
+details.forEach((item) => {
+  if (item.release > 18) {
+    arr.push(item);
+  }
+});
+console.log(arr);
+
+//BY USING SEPARATOR
+let details1 = [
+  { name: 'salesforce', release: 22 },
+  { name: 'salesCloud', release: 23 },
+  { name: 'salesforce', release: 18 },
+];
+let arrNew = [];
+details1.forEach((item) => {
+  if (item.release < 20) {
+    arrNew = [{ ...item }];
+  }
+});
+console.log(arrNew);
