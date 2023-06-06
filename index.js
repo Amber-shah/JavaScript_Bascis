@@ -1,36 +1,37 @@
 //In regular function this keyword represent object that called fucntion
-//before binding 
+//before binding
 var obj = {
-  id : 42,
-  counter:function counter(){
-    setTimeout(function(){
-      console.log(this.id)
-    },1000)
-  }
-}
-obj.counter()
+  id: 42,
+  counter: function counter() {
+    setTimeout(function () {
+      console.log(this.id);
+    }, 1000);
+  },
+};
+obj.counter();
 //how we are solving this before ES6
 var obj = {
-  id : 42,
-  counter: function counter(){
-    setTimeout(function(){
-      console.log(this.id)
-    }.bind(this,1000))
-  }
-}  
-obj.counter()
+  id: 42,
+  counter: function counter() {
+    setTimeout(
+      function () {
+        console.log(this.id);
+      }.bind(this, 1000)
+    );
+  },
+};
+obj.counter();
 
-
-// In arrow this keyword always represent object that defined the arrow func 
-var obj1={
+// In arrow this keyword always represent object that defined the arrow func
+var obj1 = {
   num: 45,
-  myArrow: function myAction(){
-    setTimeout(()=>{
-      console.log(this.num)
-    },1000)
-  }
-}
-obj1.myArrow()
+  myArrow: function myAction() {
+    setTimeout(() => {
+      console.log(this.num);
+    }, 1000);
+  },
+};
+obj1.myArrow();
 
 //Spread Operator
 //denoted as ...
@@ -43,73 +44,69 @@ console.log(str);
 console.log(arrStr);
 
 //Expanding ARRAY
-let exp = ["hello","I","Am","learning","js"]
-console.log(exp)
-console.log(...exp)
+let exp = ['hello', 'I', 'Am', 'learning', 'js'];
+console.log(exp);
+console.log(...exp);
 
 //Combining Array
-let arr1 = ["hello","I","Am","learning","js"]
-let arr2 = ["for", "lwc"]
-let arr3 = [...arr1,...arr2]
-console.log(arr3)
+let arr1 = ['hello', 'I', 'Am', 'learning', 'js'];
+let arr2 = ['for', 'lwc'];
+let arr3 = [...arr1, ...arr2];
+console.log(arr3);
 
 //Combining object
-var obj = {"name":"Amber",age:23}
-var obj2 = {"name":"Shah",age:21}
+var obj = { name: 'Amber', age: 23 };
+var obj2 = { name: 'Shah', age: 21 };
 
-var obj3 = {...obj,...obj2}
-console.log(obj3)         //Overrides same attribute
+var obj3 = { ...obj, ...obj2 };
+console.log(obj3); //Overrides same attribute
 
-obj2= {"name":"Shah",age:21,"gender":"male"}
-var obj3 = {...obj,...obj2}
-console.log(obj3)
+obj2 = { name: 'Shah', age: 21, gender: 'male' };
+var obj3 = { ...obj, ...obj2 };
+console.log(obj3);
 
-obj2= {"Position":"SDE",package:800000,"gender":"male"}
-var obj3 = {...obj,...obj2}
-console.log(obj3)
-
+obj2 = { Position: 'SDE', package: 800000, gender: 'male' };
+var obj3 = { ...obj, ...obj2 };
+console.log(obj3);
 
 //DESTRUCTURING
 //It is used to unpack the object and array into bunch of variables, it sometimes more convient.
 //TWO TYPES OF DESTRUCTURING :- 1.Object Des 2.Array Des
 
 var option = {
-  title:"I am object destructuring",
+  title: 'I am object destructuring',
   types: 2,
-  correct: true
-}
-let {title,types,correct} = option // this part doing the actual destructuing. if you will hide this then lower part will not work
+  correct: true,
+};
+let { title, types, correct } = option; // this part doing the actual destructuing. if you will hide this then lower part will not work
 
-console.log(title,types,correct)
+console.log(title, types, correct);
 
 //ARRAY DESTRUCTUIRING
 
-let lstarr = ["Salesforce", "is", "worlds", "best CRM"]
+let lstarr = ['Salesforce', 'is', 'worlds', 'best CRM'];
 
-let [firstname, secondname, thirdone, kuchbhi] = lstarr
+let [firstname, secondname, thirdone, kuchbhi] = lstarr;
 
-console.log(firstname,secondname,thirdone, kuchbhi)
-
-
+console.log(firstname, secondname, thirdone, kuchbhi);
 
 //STRING INTERPOLATION
 // It is used to insert/embedd expression into string like variables, expression, mathmatical expression and perform calculation
 
-var name = "salesforce LWC";
-console.log(`hello ${name}`)
+var name = 'salesforce LWC';
+console.log(`hello ${name}`);
 
-var a1 = 10, b1=20;
-console.log(`the addition ${a1} and ${b1} is ${a1+b1}`)
+var a1 = 10,
+  b1 = 20;
+console.log(`the addition ${a1} and ${b1} is ${a1 + b1}`);
 
+//fetch API
+//I have fetched github Api of my account which fetch my details
+//Note :- You have mention the api explicitly
 
-
-
-
-
-
-
-
-
-
-
-
+async function getUser() {
+  let promise = await fetch(`https://api.github.com/users/Amber-shah`);
+  let data = await promise.json();
+  console.log(data);
+}
+getUser();
