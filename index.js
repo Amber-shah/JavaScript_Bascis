@@ -179,9 +179,8 @@ console.log(strArr.indexOf("J",2));
 
 //FIND INDEX OF INTEGER
 let num = [9, 15, 2, 4, 1, 78, 3, 6, 7, 8]
-let arrwFunc= num=>{
-  return num > 9;
-}
+let arrwFunc= num=> num > 9;
+
 console.log(num.findIndex(arrwFunc)) // return 1 as index of 15
 
 //Splice method
