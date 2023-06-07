@@ -168,5 +168,4 @@ let result5 = text.includes("uni",-8);
 console.log(result)
 console.log(result2)
 console.log(result3)
-console.log(result4)
 console.log(result5)
