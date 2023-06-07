@@ -169,3 +169,24 @@ console.log(result)
 console.log(result2)
 console.log(result3)
 console.log(result5)
+
+//FIND INDEX OF STRING
+let strArr = "JavaScript Java C Python"
+console.log(includeArr.indexOf("Java"))
+console.log(strArr.indexOf("c"));
+console.log(strArr.indexOf("J"));
+console.log(strArr.indexOf("J",2));
+
+//FIND INDEX OF INTEGER
+let num = [9, 15, 2, 4, 1, 78, 3, 6, 7, 8]
+let arrwFunc= num=>{
+  return num > 9;
+}
+console.log(num.findIndex(arrwFunc)) // return 1 as index of 15
+
+//Splice method
+console.log(num.splice(8,2)) //[7, 8]
+console.log(num)  //[9, 15, 2, 4, 1, 78, 3, 6]
+
+
+
