@@ -151,3 +151,22 @@ let temp = newDetails.map(item=>{
 console.log(temp)
 console.log(newDetails)
 
+//Include method in JS
+let includeArr = ["JavaScript", "Java", "C", "Python"]
+
+console.log(includeArr.includes("aloo"))
+console.log(includeArr.includes("Java"))
+console.log(includeArr.includes("java"))
+console.log(includeArr.includes("JavaScript",-4))
+
+let text = "Hello world, welcome to the universe.";
+let result = text.includes("world");
+let result2 = text.includes("world",6);
+let result3 = text.includes("world",7);
+let result5 = text.includes("uni",-8);
+
+console.log(result)
+console.log(result2)
+console.log(result3)
+console.log(result4)
+console.log(result5)
